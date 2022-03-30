@@ -1,0 +1,7 @@
+install.packages("tidyverse")
+install.packages("dplyr")
+install.packages("plyr")
+install.packages("openxlsx")
+install.packages("writexl")
+install.packages("readxl")
+install.packages("stringr")
