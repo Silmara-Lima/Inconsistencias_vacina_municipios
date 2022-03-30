@@ -1,10 +1,3 @@
-install.packages("tidyverse")
-install.packages("dplyr")
-install.packages("plyr")
-install.packages("openxlsx")
-install.packages("writexl")
-install.packages("readxl")
-install.packages("stringr")
 library("writexl")
 library(readxl)
 library("dplyr")
@@ -46,7 +39,6 @@ lab_jan <- data.frame("janssen")
 lab_pfi <- data.frame("pfizer")
 lab_but <- data.frame("butantan")
 
-
 #inserir coluna de laboratório
 data_astrazeneca0 <- cbind(data_astrazeneca0, lab_ast)
 data_astrazeneca1 <- cbind(data_astrazeneca1, lab_ast)
@@ -63,8 +55,6 @@ data_butantan1 <- cbind(data_butantan1, lab_jan)
 data_butantan2 <- cbind(data_butantan2, lab_jan)
 data_butantan <- ifelse(data_butantan0)
 
-
-
 (data_butantatan0 = Not found & 
                      data_butantatan1 >= 1 & 
                      data_butantatan2 >= 1) {
@@ -74,20 +64,12 @@ data_butantan <- ifelse(data_butantan0)
     data_butantatan1 < 1 & 
     data_butantatan2 < 1)
   return(bind_rows(data_butantan0, data_butantan1, data_butantan2 ))
-  
 }
     
-  
-
-data_pfizer0 <- cbind(data_pfizer0, lab_jan)
+ data_pfizer0 <- cbind(data_pfizer0, lab_jan)
 data_pfizer1 <- cbind(data_pfizer1, lab_jan)
 data_pfizer2 <- cbind(data_pfizer2, lab_jan)
 data_pfizer <- bind_rows(data_pfizer0, data_pfizer1, data_pfizer2 )
-
-
-
-
-
 
 #renomear dataframe
 MAEDAGUA <- data.frame(`MAE D'AGUA`)
@@ -110,7 +92,6 @@ municipios_vac <- gsub(" '' ", "",names(split_list), fixed = TRUE)
 for(i in seq_along(municipios_vac)){
   assign(municipios_vac[i], split_list[[i]])
 }
-
 
 list_of_datasets <- list ("AGUA BRANCA" = AGUABRANCA,
                           "AGUIAR" = AGUIAR,
@@ -337,4 +318,3 @@ list_of_datasets <- list ("AGUA BRANCA" = AGUABRANCA,
 )
 
 write.xlsx(list_of_datasets, file = "C:/Users/ADM/Dropbox/PC/Desktop/Influenza/Projeto teste_srag_gal/saidas_imunizacao/mun_vac.xlsx")
-
